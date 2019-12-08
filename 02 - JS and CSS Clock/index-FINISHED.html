@@ -101,6 +101,7 @@
         border-radius: 50%;
         z-index: 10;
         border: 3px solid #ccc;
+        background: black;
       }
 
       .hand {
@@ -115,9 +116,32 @@
         transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
       }
 
+      .hour-hand {
+        /* width: 3%;
+        top: 20%;
+        height: 30%;
+        left: 50%;
+        background: black;
+        position: absolute;
+        transform-origin: 100%;
+        transform: rotate(90deg);
+        transition: all 0.05s;
+        transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1); */
+      }
+
       .clock-numbers {
         position: absolute;
         list-style: none;
+        color: white;
+      }
+
+      .clock-face ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
       }
 
       .clock-numbers li {
