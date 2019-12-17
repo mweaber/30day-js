@@ -83,20 +83,20 @@
         date => date.year >= 1500 && date.year <= 1600
       );
       // I CAN DO => FUNCTIONS!
-      console.log(dated);
-      console.log(dated_again);
+      // console.log(dated);
+      // console.log(dated_again);
 
       // Array.prototype.map()
       // 2. Give us an array of the inventors' first and last names
       const fullName = inventors.map(name => name.first + " " + name.last);
-      console.log(fullName);
+      // console.log(fullName);
 
       // Array.prototype.sort()
       // 3. Sort the inventors by birthdate, oldest to youngest
       const birthdate = inventors.sort((birth1, birth2) => {
         return birth1.year - birth2.year;
       });
-      console.log(birthdate);
+      // console.log(birthdate);
 
       // Array.prototype.reduce()
       // 4. How many years did all the inventors live?
@@ -104,7 +104,7 @@
       const totalYears = inventors.reduce((total, inventor) => {
         return total + (inventor.passed - inventor.year);
       }, 0);
-      console.log(totalYears);
+      // console.log(totalYears);
 
       // 5. Sort the inventors by years lived
       const oldest = inventors.sort(function(a, b) {
@@ -112,7 +112,7 @@
         const nextGuy = b.passed - b.year;
         return lastGuy > nextGuy ? -1 : 1;
       });
-      console.table(oldest);
+      // console.table(oldest);
 
       // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
       // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
@@ -130,7 +130,17 @@
         const [bLast, bFirst] = nextOne.split(", ");
         return aLast > bLast ? 1 : -1;
       });
-      console.log(alpha);
+      // console.log(alpha);
+      
+      const beta = people.sort(function(lastOne, nextOne) {
+        const [xLast, xFirst] = lastOne.split(", ");
+        const [yLast, yFirst] = nextOne.split(", ");
+        return xFirst > yFirst ? 1 : -1;
+      }); 
+      console.log(beta);
+
+
+
 
       // 8. Reduce Exercise
       // Sum up the instances of each of these
@@ -153,13 +163,13 @@
 
       const transport = data.reduce(function(obj, item) {
         if (!obj[item]) {
-         obj[item] = 0; 
+          obj[item] = 0;
         }
-        obj[item]++
+        obj[item]++;
         return obj;
       }, {});
 
-      console.log(transport);
+      // console.log(transport);
     </script>
   </body>
 </html>
